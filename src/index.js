@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+// import * as serviceWorker from './serviceWorker';
 
 //我是dev 我是第二次的dev
 function Welcome(props) {
@@ -15,4 +15,4 @@ ReactDOM.render(
   document.getElementById('root')
 )
 
-serviceWorker.unregister();
+// serviceWorker.unregister();
