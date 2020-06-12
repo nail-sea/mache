@@ -19,6 +19,6 @@
 //小技巧
 1、git log 之后如何退出？ 在英文状态下 输入 Q ，即可退出。查看简写模式： git log --pretty=oneline
 2、注意格式，没有钩子函数，会顺序执行，即执行setInterval(tick, 1000);这和RN 需要写进构造函数或周期函数里 有所不同。
-3、出现 warning: LF will be replaced by CRLF in XXXXXXXXXXXXXX.时，原因是路径中存在 / 的符号转义问题，false就是不转换符号默认是true，相当于把路径的 / 符号进行转义，这样添加的时候就有问题，此时，git bash 命令行输入下面代码即可。
+3、出现 warning: LF will be replaced by CRLF in XXXXXXXXXXXXXX.时，原因是路径中存在 / 的符号转义问题，false就是不转换符号默认是 true，相当于把路径的 / 符号进行转义，这样添加的时候就有问题，此时，git bash 命令行输入下面代码即可。
   git config core.autocrlf false  暂时禁
-  git config --global core.autocrlf false 永久禁
+  git config --global core.autocrlf false 永久禁 
