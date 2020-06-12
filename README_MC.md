@@ -13,7 +13,7 @@
   至此，就是开通仓库和上传README.md的过程。
   注意：如果因为路径弄混了，导致错误：fatal：remote origin already exists.  需要执行：git remote rm origin.
 
-//修改后上传过程
+//修改后上传过程,其余git操作查看文档，此处只记录关键步骤和问题
   git status，查看修改的内容，然后git add XX 或其他git add （-A/./-u), 之后git commit -m "注释"，最后git push origin master.
 
 //小技巧
