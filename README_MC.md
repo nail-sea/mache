@@ -1,4 +1,4 @@
-//创建demo，打开cmd，进入目录：
+//创建demo，打开cmd，进入目录,创建并运行项目：
   npx create-react-app my-app
   cd my-app
   npm start
@@ -12,3 +12,6 @@
   git push -u origin master
   至此，就是开通仓库和上传README.md的过程。
   注意：如果因为路径弄混了，导致错误：fatal：remote origin already exists.  需要执行：git remote rm origin.
+
+//修改后上传过程
+  git status，查看修改的内容，然后git add XX 或其他git add （-A/./-u), 之后git commit -m "注释"，最后git push origin master.

@@ -4,10 +4,28 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+
+function formatName(user) {
+  return user.firstName + ' ' + user.lastName;
+}
+
+const user = {
+  firstName: 'Harper',
+  lastName: 'Perez'
+}
+
+const element = (
+  <h1>
+    Hello,mache, {formatName(user)}
+  </h1>
+)
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  element,
+  // <React.StrictMode>
+  //   {/* <App /> */} 
+  //   {/* <h1>hello, world!</h1> */}
+  // </React.StrictMode>,
   document.getElementById('root')
 );
 
