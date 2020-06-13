@@ -26,7 +26,7 @@
   如果讲主分支合并到其他分支，则需要再次 git commit -m ""来确认
   每次合并分支，都是需要解决冲突的
   总结：1、如果要在本地合并到远程，需要（待验证）
-        2、如果是本地dev分支，合并到主分支master，则最好在dev上合并master，即 git merge master，等到解决冲突后，运行一下，如果没有问题，则切换回master分支，执行 git merge dev操作，这样考验保证，如果合并时出现异常操作，考验保证不影响master
+        2、如果是本地dev分支，合并到主分支master，则最好在dev上合并master，即 git merge master，等到解决冲突后，运行一下，如果没有问题，则切换回master分支，执行 git merge dev操作，这样可以保证，如果合并时出现异常操作，保证不影响master，注意在master合并dev之前，切勿进行其他操作。
 
 //小技巧
 1、git log 之后如何退出？ 在英文状态下 输入 Q ，即可退出。查看简写模式： git log --pretty=oneline
