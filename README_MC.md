@@ -25,7 +25,7 @@
   如果合并另一个分支，出现冲突后，解决冲突，然后git add -A 和 git commit -m “” ，但是另一个分支内容不会改变
   如果讲主分支合并到其他分支，则需要再次 git commit -m ""来确认
   每次合并分支，都是需要解决冲突的
-  总结：1、如果要在本地合并到远程，需要（待验证）
+  总结：1、如果要在本地合并到远程，需要先拉取 git pull 然后解决冲突，然后 git add -A 和 git commit -m "" ,再次 git push origin master
         2、如果是本地dev分支，合并到主分支master，则最好在dev上合并master，即 git merge master，等到解决冲突后，运行一下，如果没有问题，则切换回master分支，执行 git merge dev操作，这样可以保证，如果合并时出现异常操作，保证不影响master，注意在master合并dev之前，切勿进行其他操作。
 
 //小技巧
