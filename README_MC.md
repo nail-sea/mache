@@ -13,10 +13,15 @@
   至此，就是开通仓库和上传README.md的过程。
   注意：如果因为路径弄混了，导致错误：fatal：remote origin already exists.  需要执行：git remote rm origin.
 
-//修改后上传过程
+//修改后上传过程,其余git操作查看文档，此处只记录关键步骤和问题
   git status，查看修改的内容，然后git add XX 或其他git add （-A/./-u), 之后git commit -m "注释"，最后git push origin master.
 
+//从远程克隆代码操作
+  git clone git@github.com:nail-sea/mache.git  或 git clone https://github.com/nail-sea/mache.git
+
 //本地修改后为上传本地，无法切换到其他分支。如果切换到其他分支，直接刷新页面不会显示更新，需要重新启动，即 yarn start  
+
+//如果要合并分支，最好在本地先 git pull 解决冲突后，再切换到master，  执行 git merge dev ，将dev合并到master
 
 //小技巧
 1、git log 之后如何退出？ 在英文状态下 输入 Q ，即可退出。查看简写模式： git log --pretty=oneline
@@ -24,3 +29,4 @@
 3、出现 warning: LF will be replaced by CRLF in XXXXXXXXXXXXXX.时，原因是路径中存在 / 的符号转义问题，false就是不转换符号默认是 true，相当于把路径的 / 符号进行转义，这样添加的时候就有问题，此时，git bash 命令行输入下面代码即可。
   git config core.autocrlf false  暂时禁
   git config --global core.autocrlf false 永久禁 
+4、撤销操作 Ctrl+z ,取消撤销 Ctrl+Shit+z
