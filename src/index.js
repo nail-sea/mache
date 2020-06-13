@@ -4,15 +4,60 @@ import './index.css';
 import App from './App';
 // import * as serviceWorker from './serviceWorker';
 
-//我是dev 我是第二次的dev
-function Welcome(props) {
-return <h1>Hello, {props.name}</h1>
+// serviceWorker.unregister();
+
+const comment = {
+  date: new Date(),
+  text: 'I hope you enjoy learning React!',
+  author: {
+    name: 'Hello Kitty',
+    avatarUrl: 'https://placekitten.com/g/64/64'
+  },
 }
 
-const element = <Welcome name="Saracccccc" />
-ReactDOM.render(
-  element,
-  document.getElementById('root')
-)
+function Avatar(props) {
+  return (
+    <img className="Avatar"
+      src={props.user.avatarUrl}
+      alt={props.user.name}
+    />
+  )
+}
 
-// serviceWorker.unregister();
+function UserInfo(props) {
+  return (
+    <div className="UserInfo">
+        <Avatar user={props.user}/>
+        <div className="UserInfo-name">
+          {props.user.name}
+        </div>
+      </div>
+  )
+}
+
+function formatDate(date) {
+  return date.toLocaleDateString();
+}
+
+function Comment(props) {
+  return (
+    <div className="Comment">
+      <UserInfo user={props.author} />
+      <div className="Comment-text">
+        {props.text}
+      </div>
+      <div className="Comment-date">
+        {formatDate(props.date)}
+      </div>
+    </div>
+  )
+}
+
+ReactDOM.render(
+  <Comment
+    date={comment.date}
+    text={comment.text}
+    author={comment.author} 
+  />,
+  document.getElementById('root')
+);

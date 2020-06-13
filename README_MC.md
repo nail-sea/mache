@@ -18,6 +18,7 @@
 
 //从远程克隆代码操作
   git clone git@github.com:nail-sea/mache.git  或 git clone https://github.com/nail-sea/mache.git
+//本地修改后为上传本地，无法切换到其他分支。如果切换到其他分支，直接刷新页面不会显示更新，需要重新启动，即 yarn start  
 
 //小技巧
 1、git log 之后如何退出？ 在英文状态下 输入 Q ，即可退出。查看简写模式： git log --pretty=oneline
