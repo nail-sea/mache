@@ -16,6 +16,8 @@
 //修改后上传过程
   git status，查看修改的内容，然后git add XX 或其他git add （-A/./-u), 之后git commit -m "注释"，最后git push origin master.
 
+//本地修改后为上传本地，无法切换到其他分支。如果切换到其他分支，直接刷新页面不会显示更新，需要重新启动，即 yarn start  
+
 //小技巧
 1、git log 之后如何退出？ 在英文状态下 输入 Q ，即可退出。查看简写模式： git log --pretty=oneline
 2、注意格式，没有钩子函数，会顺序执行，即执行setInterval(tick, 1000);这和RN 需要写进构造函数或周期函数里 有所不同。
