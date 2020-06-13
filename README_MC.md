@@ -21,7 +21,8 @@
 
 //本地修改后为上传本地，无法切换到其他分支。如果切换到其他分支，直接刷新页面不会显示更新，需要重新启动，即 yarn start  
 
-//如果要合并分支，最好在本地先 git pull 解决冲突后，再切换到master，  执行 git merge dev ，将dev合并到master
+//如果要合并远程分支，最好在本地先 git pull 解决冲突后，再切换到master，  执行 git merge dev ，将dev合并到master
+  如果合并另一个分支，出现冲突后，解决冲突，然后git add -A 和 git commit -m “” ，但是另一个分支内容不会改变？
 
 //小技巧
 1、git log 之后如何退出？ 在英文状态下 输入 Q ，即可退出。查看简写模式： git log --pretty=oneline
