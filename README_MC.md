@@ -22,7 +22,11 @@
 //本地修改后为上传本地，无法切换到其他分支。如果切换到其他分支，直接刷新页面不会显示更新，需要重新启动，即 yarn start  
 
 //如果要合并远程分支，最好在本地先 git pull 解决冲突后，再切换到master，  执行 git merge dev ，将dev合并到master
-  如果合并另一个分支，出现冲突后，解决冲突，然后git add -A 和 git commit -m “” ，但是另一个分支内容不会改变？
+  如果合并另一个分支，出现冲突后，解决冲突，然后git add -A 和 git commit -m “” ，但是另一个分支内容不会改变
+  如果讲主分支合并到其他分支，则需要再次 git commit -m ""来确认
+  每次合并分支，都是需要解决冲突的
+  总结：1、如果要在本地合并到远程，需要（待验证）
+        2、如果是本地dev分支，合并到主分支master，则最好在dev上合并master，即 git merge master，等到解决冲突后，运行一下，如果没有问题，则切换回master分支，执行 git merge dev操作，这样考验保证，如果合并时出现异常操作，考验保证不影响master
 
 //小技巧
 1、git log 之后如何退出？ 在英文状态下 输入 Q ，即可退出。查看简写模式： git log --pretty=oneline
