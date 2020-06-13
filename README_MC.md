@@ -16,9 +16,13 @@
 //修改后上传过程,其余git操作查看文档，此处只记录关键步骤和问题
   git status，查看修改的内容，然后git add XX 或其他git add （-A/./-u), 之后git commit -m "注释"，最后git push origin master.
 
+//从远程克隆代码操作
+  git clone git@github.com:nail-sea/mache.git  或 git clone https://github.com/nail-sea/mache.git
+
 //小技巧
 1、git log 之后如何退出？ 在英文状态下 输入 Q ，即可退出。查看简写模式： git log --pretty=oneline
 2、注意格式，没有钩子函数，会顺序执行，即执行setInterval(tick, 1000);这和RN 需要写进构造函数或周期函数里 有所不同。
 3、出现 warning: LF will be replaced by CRLF in XXXXXXXXXXXXXX.时，原因是路径中存在 / 的符号转义问题，false就是不转换符号默认是 true，相当于把路径的 / 符号进行转义，这样添加的时候就有问题，此时，git bash 命令行输入下面代码即可。
   git config core.autocrlf false  暂时禁
   git config --global core.autocrlf false 永久禁 
+4、撤销操作 Ctrl+z ,取消撤销 Ctrl+Shit+z
